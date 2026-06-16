@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FruReka AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </span>
+                <span>FruReka <b>AI</b></span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#technology">Teknologi</a></li>
+                <li><a href="#features">Fitur</a></li>
+                <li><a href="#detection">Deteksi</a></li>
+            </ul>
+
+            <a href="#detection" class="nav-button">Coba Sekarang</a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge">
+                    <i class="fa-solid fa-microchip"></i>
+                    Deteksi Jenis dan Kesegaran Buah Berbasis CNN
+                </div>
+
+                <h1>
+                    Deteksi <span>Jenis Buah</span> dan Kesegarannya
+                </h1>
+
+                <p>
+                    Unggah gambar buah, lalu sistem akan membantu mengklasifikasikan
+                    jenis buah serta kondisinya. Sistem hanya mengenali tiga jenis buah,
+                    yaitu apple, banana, dan orange dengan kondisi segar atau busuk.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#detection" class="btn btn-primary">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Mulai Deteksi
+                    </a>
+
+                    <a href="#about" class="btn btn-outline">
+                        Pelajari
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>3 Buah</h3>
+                        <p>Apple, Banana, Orange</p>
+                    </div>
+                    <div class="stat-line"></div>
+                    <div class="stat-item">
+                        <h3>CNN</h3>
+                        <p>MobileNetV1</p>
+                    </div>
+                    <div class="stat-line"></div>
+                    <div class="stat-item">
+                        <h3>6 Kelas</h3>
+                        <p>Jenis + Kondisi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="main-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Pemindai Buah</h3>
+                            <p>Sistem deteksi jenis dan kualitas buah</p>
+                        </div>
+                        <span class="active-badge">Aktif</span>
+                    </div>
+
+                    <div class="fruit-grid">
+                        <div class="fruit-box">
+                            <h4>Apple</h4>
+                            <p class="fresh-text">Segar / Busuk</p>
+                        </div>
+
+                        <div class="fruit-box">
+                            <h4>Orange</h4>
+                            <p class="fresh-text">Segar / Busuk</p>
+                        </div>
+
+                        <div class="fruit-box">
+                            <h4>Banana</h4>
+                            <p class="fresh-text">Segar / Busuk</p>
+                        </div>
+
+                        <div class="fruit-box">
+                            <h4>Kualitas</h4>
+                            <p class="fresh-text">Terverifikasi</p>
+                        </div>
+                    </div>
+
+                    <div class="progress-area">
+                        <div class="progress-label">
+                            <span>Evaluasi Model</span>
+                            <span>Siap</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="floating-card top-card">
+                    <i class="fa-solid fa-check"></i>
+                    Model Siap
+                </div>
+
+                <div class="floating-card bottom-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    6 Kelas Buah
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about section" id="about">
+        <div class="container about-container">
+            <div class="about-visual">
+                <div class="about-circle">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <span class="section-label">Tentang Project</span>
+                <h2>Apa itu <span>FruReka AI?</span></h2>
+
+                <p>
+                    FruReka AI adalah prototype website yang dikembangkan untuk mendeteksi
+                    jenis buah dan kondisi kesegarannya menggunakan metode Convolutional
+                    Neural Network. Sistem ini menggunakan model MobileNetV1 dengan konsep
+                    transfer learning.
+                </p>
+
+                <p>
+                    Website ini dapat mengenali tiga jenis buah, yaitu apple, banana, dan
+                    orange. Setiap buah akan diklasifikasikan ke dalam kondisi segar atau
+                    busuk berdasarkan citra yang diunggah oleh pengguna.
+                </p>
+
+                <a href="#detection" class="btn btn-primary">
+                    Coba Deteksi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="technology section" id="technology">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Teknologi</span>
+                <h2>Teknologi yang Digunakan</h2>
+                <p>
+                    Website ini menggabungkan klasifikasi citra dengan CNN, model
+                    MobileNetV1, dan implementasi web menggunakan Flask.
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <div class="info-card">
+                    <div class="info-icon orange">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3>Dataset Buah</h3>
+                    <p>
+                        Dataset terdiri dari enam kelas, yaitu freshapples, freshbanana,
+                        freshoranges, rottenapples, rottenbanana, dan rottenoranges.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon green">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3>Model CNN</h3>
+                    <p>
+                        CNN digunakan untuk mengenali pola visual pada gambar buah,
+                        seperti warna, bentuk, tekstur, bercak, dan permukaan buah.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon yellow">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3>Website Flask</h3>
+                    <p>
+                        Flask digunakan untuk menghubungkan model deep learning dengan
+                        tampilan website agar hasil prediksi dapat dilihat oleh pengguna.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Fitur</span>
+                <h2>Fitur Utama</h2>
+                <p>
+                    FruReka AI dirancang dengan fitur sederhana untuk mendukung proses
+                    deteksi jenis buah dan kondisi kesegarannya.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fa-solid fa-upload"></i>
+                    <h3>Upload Gambar</h3>
+                    <p>Pengguna dapat mengunggah gambar buah langsung dari perangkat.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-apple-whole"></i>
+                    <h3>Deteksi Jenis Buah</h3>
+                    <p>Sistem mengenali jenis buah berupa apple, banana, dan orange.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-leaf"></i>
+                    <h3>Deteksi Kondisi</h3>
+                    <p>Sistem menampilkan kondisi buah, apakah termasuk segar atau busuk.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-percent"></i>
+                    <h3>Confidence Score</h3>
+                    <p>Hasil prediksi dilengkapi nilai confidence atau tingkat keyakinan model.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="detection section" id="detection">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Deteksi</span>
+                <h2>Coba Deteksi Buah</h2>
+                <p>
+                    Unggah gambar buah apple, banana, atau orange yang terlihat jelas.
+                    Sistem akan menampilkan jenis buah, kondisi buah, dan nilai confidence.
+                </p>
+            </div>
+
+            <div class="detection-card">
+                <form action="/predict" method="POST" enctype="multipart/form-data">
+                    <label for="fileInput" class="upload-box" id="uploadBox">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <h3>Upload Gambar Buah</h3>
+                        <p>Mendukung format JPG, JPEG, PNG, dan WEBP</p>
+                        <input type="file" id="fileInput" name="file" accept="image/*" required>
+                    </label>
+
+                    <div class="preview-box" id="previewBox">
+                        <img src="" alt="Preview Gambar" id="previewImage">
+                        <p id="previewName"></p>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        Prediksi Gambar
+                    </button>
+                </form>
+
+                {% if error %}
+                <div class="error-box">
+                    {{ error }}
+                </div>
+                {% endif %}
+
+                {% if result %}
+                <div class="result-card {{ 'unknown-card' if not result.detected else '' }}" id="resultCard">
+                    {% if image_path %}
+                    <div class="result-image">
+                        <img src="{{ url_for('static', filename='uploads/' + image_path) }}" alt="Gambar Buah">
+                    </div>
+                    {% endif %}
+
+                    <div class="result-content">
+                        <h3>Hasil Deteksi</h3>
+
+                        {% if result.detected %}
+                        <div class="result-row">
+                            <span>Jenis Buah</span>
+                            <strong class="fruit-result">
+                                {{ result.fruit }}
+                            </strong>
+                        </div>
+
+                        <div class="result-row">
+                            <span>Kondisi</span>
+                            <strong class="{{ 'fresh-result' if result.condition_class == 'fresh' else 'rotten-result' }}">
+                                {{ result.condition }}
+                            </strong>
+                        </div>
+
+                        <div class="result-row">
+                            <span>Kesimpulan</span>
+                            <strong>
+                                {{ result.message }}
+                            </strong>
+                        </div>
+                        {% else %}
+                        <div class="result-row">
+                            <span>Hasil</span>
+                            <strong class="unknown-result">
+                                Buah tidak terdeteksi
+                            </strong>
+                        </div>
+                        {% endif %}
+
+                        <div class="result-row">
+                            <span>Confidence</span>
+                            <strong>{{ result.confidence }}</strong>
+                        </div>
+
+                        {% if image_path %}
+                        <div class="result-row">
+                            <span>Nama File</span>
+                            <strong class="file-text">{{ image_path }}</strong>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h3>FruReka <span>AI</span></h3>
+        <p>Sistem Deteksi Jenis dan Kesegaran Buah Berbasis CNN</p>
+        <small>© 2026 FruReka AI | Kelompok 4</small>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", function () {
+            navMenu.classList.toggle("show");
+        });
+
+        const fileInput = document.getElementById("fileInput");
+        const previewBox = document.getElementById("previewBox");
+        const previewImage = document.getElementById("previewImage");
+        const previewName = document.getElementById("previewName");
+        const uploadBox = document.getElementById("uploadBox");
+
+        fileInput.addEventListener("change", function () {
+            const file = fileInput.files[0];
+
+            if (!file) return;
+
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                previewImage.src = event.target.result;
+                previewName.textContent = file.name;
+                previewBox.style.display = "block";
+                uploadBox.classList.add("has-file");
+            };
+
+            reader.readAsDataURL(file);
+        });
+
+        {% if result %}
+        window.addEventListener("DOMContentLoaded", function () {
+            const resultCard = document.getElementById("resultCard");
+            if (resultCard) {
+                resultCard.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+        });
+        {% endif %}
+    </script>
+
+</body>
+</html>

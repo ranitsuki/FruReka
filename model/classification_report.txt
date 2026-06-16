@@ -1,0 +1,26 @@
+Classification Report
+
+              precision    recall  f1-score   support
+
+  apel_busuk       0.92      0.98      0.95       236
+  apel_segar       0.98      1.00      0.99       224
+ jeruk_busuk       0.98      0.90      0.94       222
+ jeruk_segar       0.97      0.97      0.97       217
+pisang_busuk       1.00      1.00      1.00       345
+pisang_segar       1.00      1.00      1.00       187
+
+    accuracy                           0.98      1431
+   macro avg       0.97      0.97      0.97      1431
+weighted avg       0.98      0.98      0.98      1431
+
+
+Confusion Matrix
+
+[[231   5   0   0   0   0]
+ [  1 223   0   0   0   0]
+ [ 16   0 200   6   0   0]
+ [  2   0   5 210   0   0]
+ [  0   0   0   0 345   0]
+ [  0   0   0   0   0 187]]
+
+Test Accuracy: 97.55%

@@ -1,0 +1,27 @@
+Classification Report MobileNetV1
+=================================
+
+               precision    recall  f1-score   support
+
+  freshapples       0.97      0.99      0.98       395
+  freshbanana       1.00      1.00      1.00       381
+ freshoranges       0.99      0.99      0.99       388
+ rottenapples       0.99      0.99      0.99       601
+ rottenbanana       1.00      1.00      1.00       530
+rottenoranges       0.99      0.99      0.99       403
+
+     accuracy                           0.99      2698
+    macro avg       0.99      0.99      0.99      2698
+ weighted avg       0.99      0.99      0.99      2698
+
+
+Confusion Matrix
+================
+[[393   0   0   2   0   0]
+ [  0 381   0   0   0   0]
+ [  2   0 383   0   0   3]
+ [  9   0   0 592   0   0]
+ [  0   0   0   0 530   0]
+ [  1   0   2   3   0 397]]
+
+Test Accuracy: 99.18%
