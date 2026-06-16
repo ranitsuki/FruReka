@@ -24,7 +24,7 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "webp"}
 
-CONFIDENCE_THRESHOLD = 0.70
+CONFIDENCE_THRESHOLD = 0.98
 
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
@@ -151,6 +151,7 @@ def predict_image(image_path):
             "condition_class": "unknown",
             "raw_class": predicted_class,
             "confidence": f"{confidence_percent:.2f}%",
+            "message": "Kelas tidak dikenali oleh sistem."
         }
 
     info = CLASS_INFO[predicted_class]
