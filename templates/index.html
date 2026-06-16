@@ -15,7 +15,7 @@
         <div class="nav-container">
             <a href="#home" class="logo">
                 <span class="logo-icon">
-                    <i class="fa-solid fa-seedling"></i>
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo FruReka AI" class="logo-img">
                 </span>
                 <span>FruReka <b>AI</b></span>
             </a>
@@ -30,7 +30,7 @@
 
             <a href="#detection" class="nav-button">Coba Sekarang</a>
 
-            <button class="menu-toggle" id="menuToggle">
+            <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -319,13 +319,6 @@
                             <span>Kondisi</span>
                             <strong class="{{ 'fresh-result' if result.condition_class == 'fresh' else 'rotten-result' }}">
                                 {{ result.condition }}
-                            </strong>
-                        </div>
-
-                        <div class="result-row">
-                            <span>Kesimpulan</span>
-                            <strong>
-                                {{ result.message }}
                             </strong>
                         </div>
                         {% else %}
