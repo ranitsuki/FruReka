@@ -77,6 +77,7 @@ ul {
     font-size: 21px;
     font-weight: 800;
     flex-shrink: 0;
+}
 
 .nav-menu {
     display: flex;
@@ -999,13 +1000,6 @@ ul {
     .logo {
         font-size: 17px;
         gap: 8px;
-    }
-
-    .logo-icon {
-        width: 36px;
-        height: 36px;
-        min-width: 36px;
-        border-radius: 11px;
     }
 
     .hero h1 {
