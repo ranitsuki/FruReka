@@ -339,6 +339,18 @@ plt.tight_layout()
 plt.savefig(os.path.join(MODEL_DIR, "confusion_matrix_mobilenetv1.png"))
 plt.close()
 
+predictions = model.predict(test_generator)
+predicted_classes = np.argmax(predictions, axis=1)
+
+true_classes = test_generator.classes
+
+max_probs = np.max(predictions, axis=1)
+
+print("\n=== ANALISIS CONFIDENCE ===")
+print("Confidence minimum :", np.min(max_probs))
+print("Confidence rata-rata :", np.mean(max_probs))
+print("Confidence maksimum :", np.max(max_probs))
+
 print("\nTraining selesai.")
 print("File hasil tersimpan di folder model:")
 print("- fruitfour_mobilenetv1_fruit_condition.keras")
